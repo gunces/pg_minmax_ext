@@ -59,15 +59,26 @@ make install
 ```
 postgres=# CREATE EXTENSION minmax;
 CREATE EXTENSION
+```
+
+##### Examples
+MINMAX function has 3 parameters; begin, end and between strings. It's configurable.
+
 postgres=# SELECT MINMAX('(', ')', '->');
        MINMAX        
 -----------------
  (3.00012)->(10)
 (1 row)
+
+postgres=# select MINMAX('<', '>', ' - ');
+        MINMAX        
+------------------
+ <3.00012> - <10>
+(1 row)
 ```
 
-##### Examples
+
 ``` 
 SELECT MINMAX('(', ')', '->');
-SELECT MINMAX('<', '>', ' >> ');
+SELECT MINMAX('<', '>', ' - ');
 ```
