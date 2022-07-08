@@ -64,6 +64,7 @@ CREATE EXTENSION
 ##### Examples
 MINMAX function has 3 parameters; begin, end and between strings. It's configurable.
 
+```
 postgres=# SELECT MINMAX('(', ')', '->');
        MINMAX        
 -----------------
